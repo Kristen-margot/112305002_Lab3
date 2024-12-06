@@ -1,5 +1,5 @@
 
-const targetNumber = Math.floor(Math.random() * 100) + 1;
+const targetNumber = Math.floor(Math.random() * 98) + 2;
 let attemptsLeft = 7; // Maximum number of attempts
 let minRange = 1;
 let maxRange = 100;
@@ -28,10 +28,10 @@ while (attemptsLeft > 0) {
         break;
     } else if (guess < targetNumber) {
         alert("Too low! Try again.");
-        minRange = Math.max(minRange, guess + 1);
+        minRange = Math.max(minRange, guess);
     } else {
         alert("Too high! Try again.");
-        maxRange = Math.min(maxRange, guess - 1);
+        maxRange = Math.min(maxRange, guess);
     }
 }
 
